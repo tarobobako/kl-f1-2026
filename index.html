@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>吉隆坡 F1 六日遊</title>
+<meta name="description" content="2026 年 10 月 Sepang F1 週末：賽程、住宿、交通、每日行程同可剔嘅執行李清單。">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#c8102e">
+<style>
+:root{
+  --bg:#f6f4f0;--surface:#ffffff;--surface-2:#efebe5;--text:#1d1b19;--muted:#6c665f;--line:#e2ddd5;
+  --accent:#c8102e;--accent-ink:#ffffff;--accent-soft:#fbe8eb;
+  --ok:#1d7a4b;--ok-soft:#e4f3ea;--warn:#8f5500;--warn-soft:#fcf0da;
+  --shadow:0 1px 2px rgba(0,0,0,.05),0 4px 14px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#121110;--surface:#1b1a18;--surface-2:#252320;--text:#eeeae4;--muted:#a49e96;--line:#34312d;
+    --accent:#ff4f60;--accent-ink:#1b0507;--accent-soft:#3a191d;
+    --ok:#63d196;--ok-soft:#15301f;--warn:#f1b760;--warn-soft:#33270f;
+    --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121110;--surface:#1b1a18;--surface-2:#252320;--text:#eeeae4;--muted:#a49e96;--line:#34312d;
+  --accent:#ff4f60;--accent-ink:#1b0507;--accent-soft:#3a191d;
+  --ok:#63d196;--ok-soft:#15301f;--warn:#f1b760;--warn-soft:#33270f;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:16px/1.65 system-ui,-apple-system,"PingFang HK","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  overflow-x:hidden}
+a{color:var(--accent)}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+header.hero{padding:40px 0 20px}
+.kicker{font-size:13px;letter-spacing:.08em;color:var(--accent);font-weight:700;text-transform:uppercase}
+h1{font-size:clamp(28px,7vw,40px);line-height:1.2;margin:6px 0 8px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px;white-space:nowrap}
+.countdown{margin-top:18px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.countdown b{font-size:28px;font-variant-numeric:tabular-nums;color:var(--accent)}
+.countdown span{color:var(--muted);font-size:14px}
+nav.tabs{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.tabs .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+nav.tabs .wrap::-webkit-scrollbar{display:none}
+nav.tabs a{flex:0 0 auto;text-decoration:none;color:var(--text);font-size:15px;padding:6px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+nav.tabs a.active{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+#theme{margin-left:auto;flex:0 0 auto;background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;cursor:pointer}
+section{padding:28px 0 8px}
+h2{font-size:22px;margin:0 0 14px;display:flex;align-items:center;gap:10px}
+h2 .num{font-size:13px;color:var(--muted);font-weight:600;border:1px solid var(--line);border-radius:6px;padding:0 7px}
+h3{font-size:17px;margin:0 0 6px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:12px;box-shadow:var(--shadow)}
+.card p{margin:0 0 8px}
+.card p:last-child{margin-bottom:0}
+.card ul{margin:6px 0 0;padding-left:20px}
+.card li{margin:2px 0}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+.badge{display:inline-block;font-size:12px;font-weight:700;border-radius:6px;padding:1px 8px;vertical-align:2px;margin-right:6px}
+.badge.red{background:var(--accent);color:var(--accent-ink)}
+.badge.soft{background:var(--surface-2);color:var(--muted)}
+.badge.ok{background:var(--ok-soft);color:var(--ok)}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:13px;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:0}
+td.t{font-variant-numeric:tabular-nums;white-space:nowrap}
+.callout{border-radius:12px;padding:12px 14px;margin:10px 0;font-size:15px}
+.callout.warn{background:var(--warn-soft);color:var(--text);border-left:4px solid var(--warn)}
+.callout.info{background:var(--accent-soft);border-left:4px solid var(--accent)}
+.callout.ok{background:var(--ok-soft);border-left:4px solid var(--ok)}
+.route{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:4px 0 12px}
+.route .stop{background:var(--surface-2);border-radius:8px;padding:4px 10px;font-size:14px;font-weight:600}
+.route .leg{font-size:12px;color:var(--muted);white-space:nowrap}
+.day{position:relative}
+.day.today{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+.day .date{display:flex;align-items:baseline;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+.day .date .d{font-size:13px;font-weight:700;color:var(--accent)}
+.day .date .todaytag{display:none;font-size:12px;background:var(--accent);color:var(--accent-ink);border-radius:6px;padding:0 7px}
+.day.today .date .todaytag{display:inline-block}
+ol.tl{list-style:none;margin:0;padding:0}
+ol.tl li{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:6px 0;border-top:1px dashed var(--line)}
+ol.tl li:first-child{border-top:0}
+ol.tl .when{font-variant-numeric:tabular-nums;color:var(--muted);font-size:14px;padding-top:1px}
+ol.tl .key{font-weight:700}
+.two{display:grid;grid-template-columns:1fr;gap:12px}
+@media (min-width:640px){.two{grid-template-columns:1fr 1fr}}
+.food{display:grid;grid-template-columns:1fr;gap:0}
+.food div{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line)}
+.food div:last-child{border-bottom:0}
+.food span:last-child{color:var(--muted);font-size:14px;text-align:right}
+.progress{position:sticky;top:57px;z-index:5;background:var(--bg);padding:10px 0 12px}
+.bar{height:8px;background:var(--surface-2);border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--ok);transition:width .25s}
+.progress .row{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin-bottom:6px;gap:10px}
+.progress button,.grp-head button{font:inherit;font-size:13px;background:none;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:3px 10px;cursor:pointer}
+.grp-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:6px}
+.grp-head h3{margin:0}
+.grp-head .count{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.grp.done .grp-head .count{color:var(--ok);font-weight:700}
+ul.check{list-style:none;margin:0;padding:0}
+ul.check li{border-top:1px solid var(--line)}
+ul.check li:first-child{border-top:0}
+ul.check label{display:flex;gap:12px;align-items:flex-start;padding:9px 2px;cursor:pointer;-webkit-tap-highlight-color:transparent}
+ul.check input{appearance:none;-webkit-appearance:none;flex:0 0 22px;width:22px;height:22px;margin:1px 0 0;border:2px solid var(--line);border-radius:6px;background:var(--surface);display:grid;place-content:center;cursor:pointer}
+ul.check input::after{content:"";width:6px;height:11px;border:solid var(--accent-ink);border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px);opacity:0}
+ul.check input:checked{background:var(--ok);border-color:var(--ok)}
+ul.check input:checked::after{opacity:1;border-color:var(--surface)}
+ul.check input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+ul.check .txt{flex:1}
+ul.check small{display:block;color:var(--muted);font-size:13px;line-height:1.4}
+ul.check input:checked + .txt{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line)}
+.skip{display:flex;flex-wrap:wrap;gap:8px}
+.skip span{background:var(--surface-2);border-radius:8px;padding:4px 10px;font-size:14px;text-decoration:line-through;text-decoration-color:var(--accent)}
+footer{padding:28px 0 56px;color:var(--muted);font-size:13px}
+footer ul{padding-left:18px;margin:6px 0}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="hero wrap">
+  <div class="kicker">Sepang · 2–4 Oct 2026</div>
+  <h1>吉隆坡 F1 六日遊</h1>
+  <p class="sub">Formula 1 Gulf Air Bahrain Grand Prix in Malaysia，F1 自 2017 年後首次重返 Sepang。馬來西亞同香港冇時差。</p>
+  <div class="chips">
+    <span class="chip">✈ CX725 12:40 HKG → 16:40 KUL</span>
+    <span class="chip">🏁 Main Grandstand 三日票</span>
+    <span class="chip">🍽 星期六 TRX 晚飯</span>
+  </div>
+  <div class="countdown" id="countdown" hidden><b id="cd"></b><span id="cdlabel">距離正賽起步</span></div>
+</header>
+
+<nav class="tabs" aria-label="章節">
+  <div class="wrap">
+    <a href="#race">賽程</a>
+    <a href="#hotel">住宿</a>
+    <a href="#transport">交通</a>
+    <a href="#plan">行程</a>
+    <a href="#food">食乜好</a>
+    <a href="#pack">行李清單</a>
+    <button id="theme" type="button" aria-label="切換深淺色">◐</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="race">
+  <h2><span class="num">01</span>賽程</h2>
+  <div class="card">
+    <table>
+      <thead><tr><th>日期</th><th>賽程</th><th>閘口</th></tr></thead>
+      <tbody>
+        <tr><td class="t">五 2/10</td><td>FP1 12:30<br>FP2 16:00</td><td class="t">09:00–18:00</td></tr>
+        <tr><td class="t">六 3/10</td><td>FP3 12:30<br><b>排位賽 16:00</b></td><td class="t">09:00–20:30</td></tr>
+        <tr><td class="t">日 4/10</td><td><b>正賽 15:00</b>（56 圈）</td><td class="t">09:00–20:30</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small muted">Main Grandstand 有上蓋，可以擋太陽同雷雨，同時望到兩條直路。Axwell（六）同 Martin Garrix（日）演唱會要另外升級門票。</p>
+</section>
+
+<section id="hotel">
+  <h2><span class="num">02</span>住宿</h2>
+  <div class="card">
+    <h3><span class="badge red">首選</span>Kimpton Naluria Kuala Lumpur · TRX</h3>
+    <ul>
+      <li>就喺 The Exchange TRX 上面，星期六晚飯落樓就到。</li>
+      <li>連接 TRX MRT 站：Kajang 綫四個站到 Muzium Negara，再行去 KL Sentral 轉 KLIA Ekspres，全程約 20–25 分鐘。</li>
+      <li>睇完排位可以返房沖涼換衫，再從容去食飯。</li>
+    </ul>
+  </div>
+  <div class="two">
+    <div class="card">
+      <h3><span class="badge soft">交通最方便</span>KL Sentral</h3>
+      <p class="small">Hilton Kuala Lumpur、Le Méridien Kuala Lumpur（高級）；Aloft Kuala Lumpur Sentral（中價）</p>
+      <ul class="small">
+        <li>落樓就係 KLIA Ekspres，三日來回賽道最慳時間。</li>
+        <li>星期六去 TRX 搭 Grab 約 15–20 分鐘。</li>
+        <li>缺點：夜晚食嘢要搭車出 Bukit Bintang。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3><span class="badge soft">食玩最方便</span>Bukit Bintang</h3>
+      <p class="small">Pavilion Hotel Kuala Lumpur（Banyan Tree 管理）、Hotel Stripes</p>
+      <ul class="small">
+        <li>行路到亞羅街同 Pavilion。</li>
+        <li>去 TRX 只係一個 MRT 站。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="callout warn">F1 週末房價一定會升，未訂就盡快訂。</div>
+</section>
+
+<section id="transport">
+  <h2><span class="num">03</span>去賽道交通</h2>
+  <div class="card">
+    <div class="route" aria-label="路線">
+      <span class="stop">酒店</span><span class="leg">→</span>
+      <span class="stop">KL Sentral</span><span class="leg">KLIA Ekspres 33′ →</span>
+      <span class="stop">KLIA T2</span><span class="leg">接駁巴士 15′ →</span>
+      <span class="stop">Sepang</span>
+    </div>
+    <h3>買 KLIA Ekspres Race Pass（RM200）</h3>
+    <ul>
+      <li>包 2–4/10 三日、KL Sentral ↔ KLIA T2 共六程，每程約 33 分鐘。</li>
+      <li>單程正價約 RM55，三日都去一定抵。</li>
+      <li>喺 KLIA T2 Level 1 巴士總站轉接駁巴士入賽道：每 10–15 分鐘一班，07:00–00:00，持賽事門票預計免費。</li>
+    </ul>
+  </div>
+  <div class="two">
+    <div class="card small">
+      <h3>唔建議 Grab</h3>
+      <p>包車來回約 RM300，但散場塞車非常嚴重。</p>
+    </div>
+    <div class="card small">
+      <h3>市內</h3>
+      <p>喺 KL Sentral 買張 Touch 'n Go 卡搭 MRT／LRT；短途用 Grab。</p>
+    </div>
+  </div>
+</section>
+
+<section id="plan">
+  <h2><span class="num">04</span>每日行程</h2>
+
+  <article class="card day">
+    <div class="date"><span class="d">抵達日</span><h3>CX725 16:40 到 KLIA T1</h3><span class="todaytag">今日</span></div>
+    <ol class="tl">
+      <li><span class="when">17:30</span><span>出閘，搭 KLIA Ekspres（28 分鐘）去 KL Sentral</span></li>
+      <li><span class="when">18:30</span><span>喺 KL Sentral 買 Touch 'n Go 卡</span></li>
+      <li><span class="when">19:00</span><span>酒店 check-in</span></li>
+      <li><span class="when">晚上</span><span><span class="key">亞羅街 Jalan Alor</span>：黃亞華雞翼、沙爹、炒粿條，再行下 Bukit Bintang，早啲瞓</span></li>
+    </ol>
+  </article>
+
+  <article class="card day" data-date="2026-10-01">
+    <div class="date"><span class="d">四 1/10</span><h3>如果 30/9 出發：多出一日</h3><span class="todaytag">今日</span></div>
+    <ol class="tl">
+      <li><span class="when">早上</span><span>黑風洞 Batu Caves（早去涼啲、少人）→ 天后宮</span></li>
+      <li><span class="when">午餐</span><span>茨廠街、鬼仔巷</span></li>
+      <li><span class="when">下午</span><span>雙峰塔天橋（要網上預約）</span></li>
+      <li><span class="when">晚上</span><span>KLCC 公園音樂噴泉 → 天台酒吧</span></li>
+    </ol>
+    <p class="small muted">咁星期六朝早就唔使趕去 KLCC。</p>
+  </article>
+
+  <article class="card day" data-date="2026-10-02">
+    <div class="date"><span class="d">五 2/10</span><h3>練習賽</h3><span class="todaytag">今日</span></div>
+    <ol class="tl">
+      <li><span class="when">10:30</span><span>慢慢食完早餐，由 KL Sentral 出發</span></li>
+      <li><span class="when">11:45</span><span>入場：行 fan zone，搵定座位、洗手間同接駁巴士上車位</span></li>
+      <li><span class="when">12:30</span><span class="key">FP1</span></li>
+      <li><span class="when">16:00</span><span class="key">FP2</span></li>
+      <li><span class="when">晚上</span><span>茨廠街<span class="key">金蓮記福建麵</span>，順路行鬼仔巷</span></li>
+    </ol>
+    <div class="callout info">星期五人最少，當係星期六嘅預演：記低由看台行到 KL Sentral 實際要幾耐。</div>
+  </article>
+
+  <article class="card day" data-date="2026-10-03">
+    <div class="date"><span class="d">六 3/10</span><h3>排位賽 + TRX 晚飯</h3><span class="todaytag">今日</span></div>
+    <ol class="tl">
+      <li><span class="when">09:00</span><span>（可選）雙峰塔天橋，再搭 LRT 去 KL Sentral</span></li>
+      <li><span class="when">12:00</span><span>入場，12:30 睇 FP3</span></li>
+      <li><span class="when">16:00</span><span><span class="key">排位賽</span>，約 17:00 完，<b>一完即走</b></span></li>
+      <li><span class="when">~18:15</span><span>到 KLIA T2 → ~19:00 KL Sentral → 19:30–20:00 到 TRX</span></li>
+      <li><span class="when">20:00+</span><span><span class="key">TRX 晚飯</span>；飯後可以上 The Exchange TRX 天台城市公園（開放時間要先查）</span></li>
+    </ol>
+    <div class="callout warn"><b>晚飯最好訂 20:00 或之後。</b>如果訂咗 19:30 或更早，建議改遲啲。</div>
+  </article>
+
+  <article class="card day" data-date="2026-10-04">
+    <div class="date"><span class="d">日 4/10</span><h3>正賽</h3><span class="todaytag">今日</span></div>
+    <ol class="tl">
+      <li><span class="when">早上</span><span>瞓晏啲，食個 brunch</span></li>
+      <li><span class="when">11:00</span><span>出發，12:00 前入座（星期日人最多，接駁巴士排隊最耐，賽前氣氛亦值得早啲到）</span></li>
+      <li><span class="when">15:00</span><span class="key">起步 · 56 圈</span></li>
+      <li><span class="when">~16:40</span><span>揮格仔旗 → 頒獎</span></li>
+      <li><span class="when">散場</span><span><b>唔好一完就衝去排隊</b>，留 30–60 分鐘避開人潮</span></li>
+      <li><span class="when">晚上</span><span><span class="key">Brickfields 小印度蕉葉飯</span>（KL Sentral 行過去），或者返 Bukit Bintang，上 Marini's on 57／Heli Lounge Bar 飲杯嘢慶祝</span></li>
+    </ol>
+  </article>
+
+  <article class="card day" data-date="2026-10-05">
+    <div class="date"><span class="d">一 5/10</span><h3>回程：兩個方案</h3><span class="todaytag">今日</span></div>
+    <div class="two">
+      <div>
+        <p><span class="badge soft">A</span><b>5/10 下午／傍晚機</b><br><span class="small muted">例如 CX724 17:50，二選一：</span></p>
+        <ul class="small">
+          <li><b>黑風洞：</b>08:30 出發，272 級彩虹樓梯，返酒店 check-out 再去機場。</li>
+          <li><b>太子城 Putrajaya：</b>10:00 check-out，帶埋行李 Grab 去粉紅清真寺同首相署，順路去機場（離 KLIA 約 25 分鐘），約 14:30 到機場。</li>
+        </ul>
+      </div>
+      <div>
+        <p><span class="badge soft">B</span><b>6/10 紅眼機</b><br><span class="small muted">成日可以用：</span></p>
+        <ul class="small">
+          <li><b>馬六甲一日遊（推薦）：</b>包車帶埋行李，荷蘭紅屋、雞場街、娘惹菜、雞飯粒；夜晚<b>直接由馬六甲去 KLIA</b>（約 1.5–2 小時，唔使返市區）。雞場街夜市只係五至日開。</li>
+          <li><b>輕鬆版：</b>黑風洞 → 天后宮 → 茨廠街 → 中央藝術坊 → 晚飯 → 機場。行李寄存酒店。雙峰塔星期一休息。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout ok"><b>建議：</b>星期二要返工就揀 A。三日喺賽道曬太陽行路已經好攰，再搭紅眼機凌晨到港直接返工會好辛苦。星期二放假就揀 B，去馬六甲。</div>
+    <p class="small muted">清真寺同黑風洞要遮膝遮膊，著長褲或者現場租 sarong。</p>
+  </article>
+</section>
+
+<section id="food">
+  <h2><span class="num">05</span>食乜好</h2>
+  <div class="card food">
+    <div><span>黃亞華雞翼、沙爹、炒粿條</span><span>亞羅街 Jalan Alor</span></div>
+    <div><span>金蓮記福建麵</span><span>茨廠街</span></div>
+    <div><span>蕉葉飯</span><span>Brickfields（KL Sentral 旁）</span></div>
+    <div><span>娘惹菜、雞飯粒</span><span>馬六甲</span></div>
+    <div><span>天台酒吧</span><span>Marini's on 57 · Heli Lounge Bar</span></div>
+  </div>
+</section>
+
+<section id="pack">
+  <h2><span class="num">06</span>行李清單</h2>
+  <p class="small muted">10 月初 KL 約 24–33°C，好潮濕，下晝成日有雷雨。剔咗嘅嘢會記住喺呢部機。</p>
+  <div class="progress">
+    <div class="row"><span id="ptext">0 / 0</span><button type="button" id="resetAll">全部清除</button></div>
+    <div class="bar"><i id="pbar"></i></div>
+  </div>
+
+  <div class="card grp" data-grp="pre">
+    <div class="grp-head"><h3>出發前準備</h3><span class="count"></span></div>
+    <ul class="check">
+      <li><label><input type="checkbox" data-id="pre-mdac"><span class="txt">網上填 MDAC 馬來西亞數碼入境卡<small>抵達前 3 日內填，免費</small></span></label></li>
+      <li><label><input type="checkbox" data-id="pre-passport"><span class="txt">護照有效期 6 個月以上</span></label></li>
+      <li><label><input type="checkbox" data-id="pre-atm"><span class="txt">提款卡開通海外提款</span></label></li>
+      <li><label><input type="checkbox" data-id="pre-ins"><span class="txt">買旅遊保險<small>要包航班延誤</small></span></label></li>
+      <li><label><input type="checkbox" data-id="pre-checkin"><span class="txt">網上預辦登機<small>CX app</small></span></label></li>
+      <li><label><input type="checkbox" data-id="pre-cash"><span class="txt">兌換 RM300–500 現金<small>大部分地方可以拍卡或用 Grab</small></span></label></li>
+      <li><label><input type="checkbox" data-id="pre-esim"><span class="txt">買 eSIM 或開漫遊</span></label></li>
+      <li><label><input type="checkbox" data-id="pre-apps"><span class="txt">下載 F1 電子門票、F1 app、Grab app</span></label></li>
+      <li><label><input type="checkbox" data-id="pre-pass"><span class="txt">買 KLIA Ekspres Race Pass</span></label></li>
+      <li><label><input type="checkbox" data-id="pre-klcc"><span class="txt">預約雙峰塔天橋</span></label></li>
+      <li><label><input type="checkbox" data-id="pre-dinner"><span class="txt">確認 TRX 晚飯訂 20:00 或之後</span></label></li>
+      <li><label><input type="checkbox" data-id="pre-bag"><span class="txt">睇賽道袋同物品規定<small>例如雨遮尺寸</small></span></label></li>
+    </ul>
+  </div>
+
+  <div class="card grp" data-grp="carry">
+    <div class="grp-head"><h3>手提行李</h3><span class="count"></span></div>
+    <ul class="check">
+      <li><label><input type="checkbox" data-id="c-wallet"><span class="txt">銀包<small>港幣、馬幣、提款卡、信用卡</small></span></label></li>
+      <li><label><input type="checkbox" data-id="c-docs"><span class="txt">護照、身份證、登機證</span></label></li>
+      <li><label><input type="checkbox" data-id="c-power"><span class="txt">行動電源 20000mAh<small>只可以手提，唔可以寄艙</small></span></label></li>
+      <li><label><input type="checkbox" data-id="c-phone"><span class="txt">手機、SIM 卡針</span></label></li>
+      <li><label><input type="checkbox" data-id="c-tissue"><span class="txt">紙巾、濕紙巾、口罩</span></label></li>
+      <li><label><input type="checkbox" data-id="c-bottle"><span class="txt">空水樽</span></label></li>
+      <li><label><input type="checkbox" data-id="c-sleep"><span class="txt">頸枕、眼罩、耳塞<small>紅眼機必備</small></span></label></li>
+      <li><label><input type="checkbox" data-id="c-jacket"><span class="txt">薄外套<small>機艙同商場冷氣好凍</small></span></label></li>
+    </ul>
+  </div>
+
+  <div class="card grp" data-grp="clothes">
+    <div class="grp-head"><h3>寄艙：衫褲（6 日）</h3><span class="count"></span></div>
+    <ul class="check">
+      <li><label><input type="checkbox" data-id="w-tee"><span class="txt">速乾 T 恤 × 6</span></label></li>
+      <li><label><input type="checkbox" data-id="w-shorts"><span class="txt">短褲 × 3</span></label></li>
+      <li><label><input type="checkbox" data-id="w-pants"><span class="txt">長褲 × 1–2<small>清真寺、黑風洞要遮膝，亦擋得住商場冷氣</small></span></label></li>
+      <li><label><input type="checkbox" data-id="w-smart"><span class="txt">Smart casual 一套<small>星期六 TRX 晚飯</small></span></label></li>
+      <li><label><input type="checkbox" data-id="w-under"><span class="txt">內衣褲、襪 × 7</span></label></li>
+      <li><label><input type="checkbox" data-id="w-pj"><span class="txt">睡衣</span></label></li>
+      <li><label><input type="checkbox" data-id="w-shoes"><span class="txt">好行嘅波鞋<small>Sepang 範圍好大，要行好多路</small></span></label></li>
+      <li><label><input type="checkbox" data-id="w-slip"><span class="txt">拖鞋</span></label></li>
+      <li><label><input type="checkbox" data-id="w-swim"><span class="txt">泳衣<small>酒店泳池</small></span></label></li>
+      <li><label><input type="checkbox" data-id="w-hat"><span class="txt">帽、太陽眼鏡</span></label></li>
+      <li><label><input type="checkbox" data-id="w-merch"><span class="txt">車隊 T 恤或帽<small>可選</small></span></label></li>
+    </ul>
+  </div>
+
+  <div class="card grp" data-grp="toiletry">
+    <div class="grp-head"><h3>寄艙：日用品</h3><span class="count"></span></div>
+    <ul class="check">
+      <li><label><input type="checkbox" data-id="t-teeth"><span class="txt">牙膏、牙刷<small>部分酒店為環保唔提供</small></span></label></li>
+      <li><label><input type="checkbox" data-id="t-face"><span class="txt">洗面用品、護膚品</span></label></li>
+      <li><label><input type="checkbox" data-id="t-shave"><span class="txt">剃鬚用品、潤唇膏</span></label></li>
+      <li><label><input type="checkbox" data-id="t-sun"><span class="txt">防曬 SPF50+<small>超過 100ml 要寄艙</small></span></label></li>
+      <li><label><input type="checkbox" data-id="t-lens"><span class="txt">隱形眼鏡同藥水<small>賽道風沙大，可以考慮戴眼鏡</small></span></label></li>
+      <li><label><input type="checkbox" data-id="t-mosq"><span class="txt">蚊怕水<small>馬來西亞有骨痛熱症</small></span></label></li>
+    </ul>
+  </div>
+
+  <div class="card grp" data-grp="misc">
+    <div class="grp-head"><h3>寄艙：雜物</h3><span class="count"></span></div>
+    <ul class="check">
+      <li><label><input type="checkbox" data-id="m-meds"><span class="txt">迷你藥包<small>腸胃藥、止瀉藥、退燒止痛藥、膠布、蚊叮膏</small></span></label></li>
+      <li><label><input type="checkbox" data-id="m-ors"><span class="txt">電解質沖劑</span></label></li>
+      <li><label><input type="checkbox" data-id="m-charge"><span class="txt">充電器、長線、拖板</span></label></li>
+      <li><label><input type="checkbox" data-id="m-rain"><span class="txt">縮骨遮、即棄雨衣</span></label></li>
+      <li><label><input type="checkbox" data-id="m-lock"><span class="txt">密碼鎖、行李牌</span></label></li>
+      <li><label><input type="checkbox" data-id="m-zip"><span class="txt">大 zip bag<small>手機防水、放濕衫</small></span></label></li>
+      <li><label><input type="checkbox" data-id="m-shop"><span class="txt">可摺購物袋<small>Pavilion、TRX</small></span></label></li>
+    </ul>
+  </div>
+
+  <div class="card grp" data-grp="track">
+    <div class="grp-head"><h3>F1 賽道每日隨身袋</h3><span class="count"></span><button type="button" data-reset="track">今朝重新剔</button></div>
+    <ul class="check">
+      <li><label><input type="checkbox" data-id="f-ticket"><span class="txt">門票、Race Pass</span></label></li>
+      <li><label><input type="checkbox" data-id="f-phone"><span class="txt">手機、行動電源同線</span></label></li>
+      <li><label><input type="checkbox" data-id="f-ear"><span class="txt">耳塞或降噪耳機</span></label></li>
+      <li><label><input type="checkbox" data-id="f-bino"><span class="txt">望遠鏡</span></label></li>
+      <li><label><input type="checkbox" data-id="f-cushion"><span class="txt">坐墊<small>看台坐成日</small></span></label></li>
+      <li><label><input type="checkbox" data-id="f-fan"><span class="txt">小風扇或冷感毛巾</span></label></li>
+      <li><label><input type="checkbox" data-id="f-sun"><span class="txt">防曬、帽、太陽眼鏡</span></label></li>
+      <li><label><input type="checkbox" data-id="f-poncho"><span class="txt">即棄雨衣<small>看台有上蓋，但行出去等接駁巴士一樣會淋濕</small></span></label></li>
+      <li><label><input type="checkbox" data-id="f-wipe"><span class="txt">濕紙巾、紙巾、搓手液</span></label></li>
+      <li><label><input type="checkbox" data-id="f-water"><span class="txt">空水樽、電解質</span></label></li>
+      <li><label><input type="checkbox" data-id="f-cash"><span class="txt">少量現金</span></label></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>唔使帶</h3>
+    <div class="skip"><span>厚外套</span><span>冬季衫</span><span>萬能插頭</span><span>風筒</span></div>
+    <p class="small muted" style="margin-top:10px">馬來西亞同香港一樣用英式三腳插（240V）；酒店有風筒。</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p>資料截至 2026-09-30。出發前請再核對官方賽程、航班同交通安排。</p>
+  <p>來源：</p>
+  <ul>
+    <li><a href="https://utravel.com.hk/news/detail/15855/長短途必備執行李清單/1">utravel 行李清單</a></li>
+    <li><a href="https://www.formula1.com/en/latest/article/formula-1-and-fia-confirm-malaysia-will-join-2026-calendar-as-host-venue-for-bahrain-grand-prix.6lL7vjFEM2VVynRHvg1TCf">Formula 1：Malaysia 主辦 2026 巴林站</a></li>
+    <li><a href="https://racingnews365.com/2026-f1-bahrain-grand-prix-in-malaysia-early-time-schedule">RacingNews365 賽程</a></li>
+    <li><a href="https://above.guide/bahrain-sepang-f1">above.guide Sepang 攻略</a></li>
+    <li><a href="https://gpdestinations.com/getting-around-malaysian-f1-grand-prix/">GPDestinations 交通</a></li>
+    <li><a href="https://www.flightaware.com/live/flight/CPA725">FlightAware CX725</a></li>
+    <li><a href="https://info.flightmapper.net/route/Cathay_Pacific_CX_KUL_HKG">Cathay KUL–HKG 班次</a></li>
+  </ul>
+</footer>
+
+<script>
+(function(){
+  var KEY = "kl-f1-2026-pack";
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { state = {}; }
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+
+  var boxes = Array.prototype.slice.call(document.querySelectorAll("ul.check input[data-id]"));
+  boxes.forEach(function(box){
+    box.checked = !!state[box.dataset.id];
+    box.addEventListener("change", function(){
+      if (box.checked) state[box.dataset.id] = 1; else delete state[box.dataset.id];
+      save(); render();
+    });
+  });
+
+  function render(){
+    var done = boxes.filter(function(b){ return b.checked; }).length;
+    document.getElementById("ptext").textContent = "已執 " + done + " / " + boxes.length;
+    document.getElementById("pbar").style.width = (boxes.length ? done / boxes.length * 100 : 0) + "%";
+    document.querySelectorAll(".grp").forEach(function(grp){
+      var inGroup = grp.querySelectorAll("input[data-id]");
+      var groupDone = grp.querySelectorAll("input[data-id]:checked").length;
+      grp.querySelector(".count").textContent = groupDone + " / " + inGroup.length;
+      grp.classList.toggle("done", groupDone === inGroup.length);
+    });
+  }
+
+  function clear(scope){
+    scope.querySelectorAll("input[data-id]").forEach(function(box){ box.checked = false; delete state[box.dataset.id]; });
+    save(); render();
+  }
+  document.getElementById("resetAll").addEventListener("click", function(){
+    if (confirm("清除全部剔號？")) clear(document);
+  });
+  document.querySelectorAll("[data-reset]").forEach(function(btn){
+    btn.addEventListener("click", function(){ clear(btn.closest(".grp")); });
+  });
+  render();
+
+  var raceStart = Date.UTC(2026, 9, 4, 7, 0, 0);
+  var cdWrap = document.getElementById("countdown");
+  function tick(){
+    var ms = raceStart - Date.now();
+    if (ms <= 0) { cdWrap.hidden = true; return; }
+    var days = Math.floor(ms / 864e5), hours = Math.floor(ms % 864e5 / 36e5), mins = Math.floor(ms % 36e5 / 6e4);
+    document.getElementById("cd").textContent = (days ? days + " 日 " : "") + hours + " 小時 " + mins + " 分";
+    cdWrap.hidden = false;
+  }
+  tick(); setInterval(tick, 30000);
+
+  var klDate = new Date(Date.now() + 8 * 36e5).toISOString().slice(0, 10);
+  document.querySelectorAll(".day[data-date]").forEach(function(day){
+    day.classList.toggle("today", day.dataset.date === klDate);
+  });
+
+  var root = document.documentElement, THEME = "kl-f1-2026-theme";
+  try { var saved = localStorage.getItem(THEME); if (saved) root.dataset.theme = saved; } catch (e) {}
+  document.getElementById("theme").addEventListener("click", function(){
+    var dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem(THEME, root.dataset.theme); } catch (e) {}
+  });
+
+  var links = Array.prototype.slice.call(document.querySelectorAll("nav.tabs a"));
+  var sections = links.map(function(a){ return document.querySelector(a.getAttribute("href")); });
+  function spy(){
+    var current = 0;
+    sections.forEach(function(sec, i){ if (sec.getBoundingClientRect().top < 120) current = i; });
+    links.forEach(function(a, i){ a.classList.toggle("active", i === current); });
+  }
+  addEventListener("scroll", spy, { passive: true }); spy();
+})();
+</script>
+</body>
+</html>
