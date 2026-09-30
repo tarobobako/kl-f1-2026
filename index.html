@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>吉隆坡 F1 + 檳城</title>
-<meta name="description" content="2026 年 9 月 30 日至 10 月 6 日：Sepang F1 週末加檳城一日，賽程、住宿、交通、每日行程同可剔嘅執行李清單。">
+<meta name="description" content="2026 年 9 月 30 日至 10 月 6 日：Sepang F1 週末、吉隆坡近郊、檳城，賽程、住宿、交通、行程選擇、美食同可剔嘅執行李清單。">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#c8102e">
 <style>
@@ -33,14 +33,15 @@ html{scroll-behavior:smooth;scroll-padding-top:64px;-webkit-text-size-adjust:100
 body{margin:0;background:var(--bg);color:var(--text);
   font:16px/1.65 system-ui,-apple-system,"PingFang HK","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
   overflow-x:hidden}
-a{color:var(--accent)}
+a{color:var(--accent);text-underline-offset:2px}
+a.ext::after{content:"↗";font-size:.8em;margin-left:2px;opacity:.7}
 .wrap{max-width:760px;margin:0 auto;padding:0 16px}
 header.hero{padding:40px 0 20px}
 .kicker{font-size:13px;letter-spacing:.08em;color:var(--accent);font-weight:700;text-transform:uppercase}
 h1{font-size:clamp(28px,7vw,40px);line-height:1.2;margin:6px 0 8px;letter-spacing:-.01em}
 .sub{color:var(--muted);margin:0 0 18px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px;white-space:nowrap}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px}
 .countdown{margin-top:18px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
 .countdown b{font-size:28px;font-variant-numeric:tabular-nums;color:var(--accent)}
 .countdown span{color:var(--muted);font-size:14px}
@@ -55,6 +56,7 @@ section{padding:28px 0 8px}
 h2{font-size:22px;margin:0 0 14px;display:flex;align-items:center;gap:10px}
 h2 .num{font-size:13px;color:var(--muted);font-weight:600;border:1px solid var(--line);border-radius:6px;padding:0 7px}
 h3{font-size:17px;margin:0 0 6px}
+h3.sub-h{margin:22px 0 10px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:12px;box-shadow:var(--shadow)}
 .card p{margin:0 0 8px}
 .card p:last-child{margin-bottom:0}
@@ -62,7 +64,8 @@ h3{font-size:17px;margin:0 0 6px}
 .card li{margin:2px 0}
 .muted{color:var(--muted)}
 .small{font-size:14px}
-.badge{display:inline-block;font-size:12px;font-weight:700;border-radius:6px;padding:1px 8px;vertical-align:2px;margin-right:6px}
+.links{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:10px;font-size:14px}
+.badge{display:inline-block;font-size:12px;font-weight:700;border-radius:6px;padding:1px 8px;vertical-align:2px;margin-right:6px;white-space:nowrap}
 .badge.red{background:var(--accent);color:var(--accent-ink)}
 .badge.soft{background:var(--surface-2);color:var(--muted)}
 .badge.ok{background:var(--ok-soft);color:var(--ok)}
@@ -71,16 +74,17 @@ th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);verti
 th{font-size:13px;color:var(--muted);font-weight:600}
 tr:last-child td{border-bottom:0}
 td.t{font-variant-numeric:tabular-nums;white-space:nowrap}
+.table-scroll{overflow-x:auto;margin:0 -4px}
 .callout{border-radius:12px;padding:12px 14px;margin:10px 0;font-size:15px}
-.callout.warn{background:var(--warn-soft);color:var(--text);border-left:4px solid var(--warn)}
+.callout.warn{background:var(--warn-soft);border-left:4px solid var(--warn)}
 .callout.info{background:var(--accent-soft);border-left:4px solid var(--accent)}
 .callout.ok{background:var(--ok-soft);border-left:4px solid var(--ok)}
 .route{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:4px 0 12px}
 .route .stop{background:var(--surface-2);border-radius:8px;padding:4px 10px;font-size:14px;font-weight:600}
 .route .leg{font-size:12px;color:var(--muted);white-space:nowrap}
-.day{position:relative}
 .day.today{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
 .day .date{display:flex;align-items:baseline;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+.day .date h3{margin:0}
 .day .date .d{font-size:13px;font-weight:700;color:var(--accent)}
 .day .date .todaytag{display:none;font-size:12px;background:var(--accent);color:var(--accent-ink);border-radius:6px;padding:0 7px}
 .day.today .date .todaytag{display:inline-block}
@@ -91,10 +95,21 @@ ol.tl .when{font-variant-numeric:tabular-nums;color:var(--muted);font-size:14px;
 ol.tl .key{font-weight:700}
 .two{display:grid;grid-template-columns:1fr;gap:12px}
 @media (min-width:640px){.two{grid-template-columns:1fr 1fr}}
-.food{display:grid;grid-template-columns:1fr;gap:0}
-.food div{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line)}
-.food div:last-child{border-bottom:0}
-.food span:last-child{color:var(--muted);font-size:14px;text-align:right}
+details.opt{border:1px solid var(--line);border-radius:12px;margin:8px 0;background:var(--bg)}
+details.opt summary{cursor:pointer;list-style:none;padding:12px 14px;display:flex;gap:8px;align-items:flex-start}
+details.opt summary::-webkit-details-marker{display:none}
+details.opt summary::after{content:"+";margin-left:auto;color:var(--muted);font-weight:700;padding-left:8px}
+details.opt[open] summary::after{content:"−"}
+details.opt summary .st{flex:1}
+details.opt summary b{display:block}
+details.opt summary small{display:block;color:var(--muted);font-size:13px;line-height:1.45}
+details.opt .body{padding:0 14px 14px}
+.grid-list{display:grid;grid-template-columns:1fr;gap:0}
+@media (min-width:640px){.grid-list{grid-template-columns:1fr 1fr;column-gap:24px}}
+.item{padding:10px 0;border-bottom:1px solid var(--line)}
+.item .name{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;font-weight:600}
+.item .meta{font-size:14px;color:var(--muted);line-height:1.5}
+.tag{font-size:11px;font-weight:700;border-radius:5px;padding:0 6px;background:var(--surface-2);color:var(--muted);white-space:nowrap}
 .progress{position:sticky;top:57px;z-index:5;background:var(--bg);padding:10px 0 12px}
 .bar{height:8px;background:var(--surface-2);border-radius:999px;overflow:hidden}
 .bar i{display:block;height:100%;width:0;background:var(--ok);transition:width .25s}
@@ -109,9 +124,9 @@ ul.check li{border-top:1px solid var(--line)}
 ul.check li:first-child{border-top:0}
 ul.check label{display:flex;gap:12px;align-items:flex-start;padding:9px 2px;cursor:pointer;-webkit-tap-highlight-color:transparent}
 ul.check input{appearance:none;-webkit-appearance:none;flex:0 0 22px;width:22px;height:22px;margin:1px 0 0;border:2px solid var(--line);border-radius:6px;background:var(--surface);display:grid;place-content:center;cursor:pointer}
-ul.check input::after{content:"";width:6px;height:11px;border:solid var(--accent-ink);border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px);opacity:0}
+ul.check input::after{content:"";width:6px;height:11px;border:solid var(--surface);border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px);opacity:0}
 ul.check input:checked{background:var(--ok);border-color:var(--ok)}
-ul.check input:checked::after{opacity:1;border-color:var(--surface)}
+ul.check input:checked::after{opacity:1}
 ul.check input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 ul.check .txt{flex:1}
 ul.check small{display:block;color:var(--muted);font-size:13px;line-height:1.4}
@@ -127,15 +142,15 @@ footer a{color:var(--muted)}
 <header class="hero wrap">
   <div class="kicker">KL · Sepang · Penang · 30 Sep – 6 Oct 2026</div>
   <h1>吉隆坡 F1 + 檳城</h1>
-  <p class="sub">Formula 1 Gulf Air Bahrain Grand Prix in Malaysia，F1 自 2017 年後首次重返 Sepang。賽後飛檳城玩一日，搭紅眼機返香港。馬來西亞同香港冇時差。</p>
+  <p class="sub">Formula 1 Gulf Air Bahrain Grand Prix in Malaysia，F1 自 2017 年後首次重返 Sepang。星期一飛檳城，搭 HK Express 紅眼機返香港。馬來西亞同香港冇時差。</p>
   <div class="chips">
     <span class="chip">✈ 三 30/9 CX725 12:40 HKG → 16:40 KUL</span>
     <span class="chip">🏁 Main Grandstand 三日票</span>
     <span class="chip">🍽 星期六 TRX 晚飯</span>
-    <span class="chip">✈ 日 4/10 晚 KUL → PEN</span>
+    <span class="chip">✈ 一 5/10 KUL → PEN（早機或夜機）</span>
     <span class="chip">✈ 二 6/10 01:00 UO769 PEN → 04:55 HKG</span>
   </div>
-  <div class="countdown" id="countdown" hidden><b id="cd"></b><span id="cdlabel">距離正賽起步</span></div>
+  <div class="countdown" id="countdown" hidden><b id="cd"></b><span>距離正賽起步</span></div>
 </header>
 
 <nav class="tabs" aria-label="章節">
@@ -144,7 +159,8 @@ footer a{color:var(--muted)}
     <a href="#hotel">住宿</a>
     <a href="#transport">交通</a>
     <a href="#plan">行程</a>
-    <a href="#food">食乜好</a>
+    <a href="#more">更多選擇</a>
+    <a href="#food">美食</a>
     <a href="#pack">行李清單</a>
     <button id="theme" type="button" aria-label="切換深淺色">◐</button>
   </div>
@@ -163,53 +179,60 @@ footer a{color:var(--muted)}
         <tr><td class="t">日 4/10</td><td><b>正賽 15:00</b>（56 圈）</td><td class="t">09:00–20:30</td></tr>
       </tbody>
     </table>
+    <div class="links">
+      <a class="ext" href="https://www.formula1.com/en/racing/2026/bahrain" target="_blank" rel="noopener">F1 官方賽事頁</a>
+      <a class="ext" href="https://above.guide/bahrain-sepang-f1" target="_blank" rel="noopener">Sepang 觀賽攻略</a>
+      <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Sepang+International+Circuit" target="_blank" rel="noopener">賽道地圖</a>
+    </div>
   </div>
   <p class="small muted">Main Grandstand 有上蓋，可以擋太陽同雷雨，同時望到兩條直路。Axwell（六）同 Martin Garrix（日）演唱會要另外升級門票。</p>
 </section>
 
 <section id="hotel">
   <h2><span class="num">02</span>住宿</h2>
-  <p class="small muted">吉隆坡住 4 晚（30/9–3/10，4/10 朝早 check-out），檳城住 1 晚（4/10）。</p>
+  <p class="small muted">吉隆坡住 5 晚（30/9–4/10）。揀星期一早機去檳城嘅話，要喺檳城 book 5/10 一晚當 day room 用。</p>
   <div class="card">
-    <h3><span class="badge red">首選</span>Kimpton Naluria Kuala Lumpur · TRX</h3>
+    <h3><span class="badge red">你揀咗</span>Dorsett Kuala Lumpur · 172 Jalan Imbi</h3>
     <ul>
-      <li>就喺 The Exchange TRX 上面，星期六晚飯落樓就到。</li>
-      <li>連接 TRX MRT 站：Kajang 綫四個站到 Muzium Negara，再行去 KL Sentral 轉 KLIA Ekspres，全程約 20–25 分鐘。</li>
-      <li>睇完排位可以返房沖涼換衫，再從容去食飯。</li>
+      <li>喺 Bukit Bintang 同 TRX 中間：Pavilion、亞羅街、Lot 10 行路 5–10 分鐘。</li>
+      <li><b>去 TRX 晚飯：</b>行路約 10–15 分鐘，或者 Grab 5 分鐘（排完位成日喺度行，搭車好過）。</li>
+      <li><b>去 KL Sentral 搭 KLIA Ekspres：</b>行 300 米到 Imbi 單軌站，直接搭去 KL Sentral 唔使轉車，約 15–20 分鐘。又或者行 500 米到 Bukit Bintang MRT，搭 Kajang 綫去 Muzium Negara 再行過去。</li>
+      <li>星期六排位後，返酒店沖涼換衫先去 TRX，時間夠用。</li>
     </ul>
-  </div>
-  <div class="two">
-    <div class="card">
-      <h3><span class="badge soft">交通最方便</span>KL Sentral</h3>
-      <p class="small">Hilton Kuala Lumpur、Le Méridien Kuala Lumpur（高級）；Aloft Kuala Lumpur Sentral（中價）</p>
-      <ul class="small">
-        <li>落樓就係 KLIA Ekspres，三日來回賽道最慳時間。</li>
-        <li>星期六去 TRX 搭 Grab 約 15–20 分鐘。</li>
-        <li>缺點：夜晚食嘢要搭車出 Bukit Bintang。</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3><span class="badge soft">食玩最方便</span>Bukit Bintang</h3>
-      <p class="small">Pavilion Hotel Kuala Lumpur（Banyan Tree 管理）、Hotel Stripes</p>
-      <ul class="small">
-        <li>行路到亞羅街同 Pavilion。</li>
-        <li>去 TRX 只係一個 MRT 站。</li>
-      </ul>
+    <div class="links">
+      <a class="ext" href="https://www.dorsetthotels.com/dorsett-kuala-lumpur/location/" target="_blank" rel="noopener">酒店官網</a>
+      <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Dorsett+Kuala+Lumpur+Jalan+Imbi" target="_blank" rel="noopener">地圖</a>
+      <a class="ext" href="https://www.theexchange.my/" target="_blank" rel="noopener">The Exchange TRX</a>
     </div>
   </div>
-  <div class="callout warn">F1 週末房價一定會升，未訂就盡快訂。星期日要帶埋行李去 KL Sentral：住 KL Sentral 就最就腳；住 TRX 或 Bukit Bintang 就搭 Grab 過去（約 15 分鐘）。</div>
+  <details class="opt">
+    <summary><span class="st"><b>其他選擇</b><small>TRX 樓上、KL Sentral 上蓋、Bukit Bintang</small></span></summary>
+    <div class="body">
+      <ul class="small" style="padding-left:18px;margin:0">
+        <li><b>Kimpton Naluria（TRX）</b>：就喺 The Exchange TRX 上面，星期六晚飯落樓就到。<a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Kimpton+Naluria+Kuala+Lumpur" target="_blank" rel="noopener">地圖</a></li>
+        <li><b>KL Sentral 上蓋</b>：落樓就係 KLIA Ekspres，賽道來回最慳時間，但夜晚食嘢要搭車。<a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Hilton+Kuala+Lumpur" target="_blank" rel="noopener">Hilton</a> · <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Le+Meridien+Kuala+Lumpur" target="_blank" rel="noopener">Le Méridien</a> · <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Aloft+Kuala+Lumpur+Sentral" target="_blank" rel="noopener">Aloft（中價）</a></li>
+        <li><b>Bukit Bintang</b>：<a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Pavilion+Hotel+Kuala+Lumpur+Banyan+Tree" target="_blank" rel="noopener">Pavilion Hotel KL</a> · <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Stripes+Kuala+Lumpur" target="_blank" rel="noopener">Hotel Stripes</a></li>
+      </ul>
+    </div>
+  </details>
   <div class="card">
-    <h3><span class="badge soft">檳城 · 1 晚</span>喬治市 George Town</h3>
-    <p class="small">Eastern &amp; Oriental Hotel（百年老酒店、海景）、Cheong Fatt Tze – The Blue Mansion（住喺藍屋入面）、Hotel Jen Penang（中價）</p>
+    <h3><span class="badge soft">檳城 · 只限早機方案</span>喬治市 George Town</h3>
     <ul class="small">
+      <li>Book 5/10 一晚，要求 early check-in。你唔會喺度瞓，但成日有地方放行李、瞓 siesta，搭紅眼機之前可以沖涼。</li>
       <li>住喬治市舊城，行路到壁畫街、邱公司、姓氏橋。</li>
-      <li>星期一要等到夜晚先去機場：一係 book 時要求 late check-out（例如 18:00），一係索性 book 埋 5/10 晚，間房一直用到出發，可以沖完涼先去機場。</li>
     </ul>
+    <div class="links">
+      <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Eastern+%26+Oriental+Hotel+Penang" target="_blank" rel="noopener">E&amp;O Hotel（百年老酒店）</a>
+      <a class="ext" href="https://www.cheongfatttzemansion.com/" target="_blank" rel="noopener">張弼士藍屋（住喺入面）</a>
+      <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Jen+Penang" target="_blank" rel="noopener">Hotel Jen Penang（中價）</a>
+    </div>
   </div>
+  <div class="callout warn">F1 週末房價一定會升，未訂就盡快訂。揀夜機方案嘅話，同 KL 酒店要求 late check-out。</div>
 </section>
 
 <section id="transport">
-  <h2><span class="num">03</span>去賽道交通</h2>
+  <h2><span class="num">03</span>交通</h2>
+  <h3 class="sub-h">去賽道</h3>
   <div class="card">
     <div class="route" aria-label="路線">
       <span class="stop">酒店</span><span class="leg">→</span>
@@ -219,14 +242,18 @@ footer a{color:var(--muted)}
     </div>
     <h3>買 KLIA Ekspres Race Pass（RM200）</h3>
     <ul>
-      <li>包 2–4/10 三日、KL Sentral ↔ KLIA T2 共六程，每程約 33 分鐘。</li>
-      <li>單程正價約 RM55。你星期日只搭單程（去完唔返市區），總共五程都已經抵過散買。</li>
+      <li>包 2–4/10 三日、KL Sentral ↔ KLIA T2 共六程，每程約 33 分鐘，三日來回啱啱用晒。</li>
+      <li>單程正價約 RM55，六程散買要 RM330。</li>
       <li>喺 KLIA T2 Level 1 巴士總站轉接駁巴士入賽道：每 10–15 分鐘一班，07:00–00:00，持賽事門票預計免費。</li>
     </ul>
+    <div class="links">
+      <a class="ext" href="https://www.kliaekspres.com/" target="_blank" rel="noopener">KLIA Ekspres</a>
+      <a class="ext" href="https://gpdestinations.com/getting-around-malaysian-f1-grand-prix/" target="_blank" rel="noopener">交通攻略</a>
+    </div>
   </div>
   <div class="two">
     <div class="card small">
-      <h3>唔建議 Grab</h3>
+      <h3>唔建議 Grab 去賽道</h3>
       <p>包車來回約 RM300，但散場塞車非常嚴重。</p>
     </div>
     <div class="card small">
@@ -235,61 +262,92 @@ footer a{color:var(--muted)}
     </div>
   </div>
 
-  <h3 style="margin-top:18px">吉隆坡 → 檳城</h3>
-  <div class="card">
-    <h3><span class="badge red">推薦</span>星期日賽後由 klia2 直飛</h3>
-    <div class="route" aria-label="星期日路線">
-      <span class="stop">KL 酒店 check-out</span><span class="leg">→</span>
-      <span class="stop">klia2 寄存行李</span><span class="leg">→</span>
-      <span class="stop">Sepang</span><span class="leg">→</span>
-      <span class="stop">klia2 攞行李</span><span class="leg">→</span>
-      <span class="stop">飛檳城</span>
+  <h3 class="sub-h">星期一 5/10：吉隆坡 → 檳城</h3>
+  <p class="small muted">約 1 小時。AirAsia 喺 klia2；Malaysia Airlines 喺 KLIA T1；Firefly 喺梳邦機場 Subang（離市區近啲）。</p>
+  <div class="two">
+    <div class="card">
+      <h3><span class="badge red">甲</span>早機 → 檳城玩一日</h3>
+      <ul class="small">
+        <li>揀 <b>08:00–09:00</b> 起飛，06:00 左右出門，09:30–10:00 到檳城。</li>
+        <li>要 book 5/10 檳城酒店當 day room。</li>
+        <li>好處：有成日喺檳城食嘢。代價：早起，多付一晚酒店錢。</li>
+      </ul>
     </div>
-    <ul class="small">
-      <li>賽道就喺 klia2 隔籬，接駁巴士本身都係返 klia2，賽後唔使返市區再出機場。</li>
-      <li>klia2 行李寄存 24 小時開：Domestic Arrival Hall 出口，或者 Gateway@klia2 Level 2。</li>
-      <li>KL → 檳城約 1 小時，AirAsia／Batik／Malaysia Airlines 都有飛，最後一班約 23:35。<b>揀 21:30–22:30 嘅航班</b>，就算延賽或者排接駁巴士都有位。AirAsia 喺 klia2；Malaysia Airlines 喺 T1（同 T2 之間搭 KLIA Ekspres 約 3 分鐘）。</li>
-      <li>好處：星期一成日都喺檳城，而且有間酒店房可以休息沖涼先搭紅眼機。</li>
-    </ul>
+    <div class="card">
+      <h3><span class="badge soft">乙</span>夜機 → 直接駁 UO769</h3>
+      <ul class="small">
+        <li>揀 <b>19:00–20:30</b> 起飛，20:00–21:30 到檳城，攞行李直接行去國際出發 check-in。</li>
+        <li>日頭留喺 KL 或者去馬六甲，唔使 book 檳城酒店。</li>
+        <li>代價：喺檳城乜都睇唔到。</li>
+      </ul>
+    </div>
   </div>
+  <div class="callout warn"><b>夜機方案要注意：</b>國內機同 UO769 係兩張分開買嘅機票。國內機延誤搞到趕唔切 UO769，HK Express 唔會幫你改期。所以最遲要 22:30 前落地，越早越好；旅遊保險要包 missed connection。</div>
   <div class="card small">
-    <h3><span class="badge soft">後備</span>星期一早機</h3>
-    <p>如果唔想賽後即刻趕飛機，就喺 KL 多住一晚，星期一搭 07:00–08:00 嘅航班，大約 09:00 到檳城。代價係要五點幾起身，喺檳城少咗半日，而且冇酒店房等紅眼機。唔建議搭 ETS 火車：去 Butterworth 要成 4 個鐘，仲要轉船。</p>
-  </div>
-  <div class="card small">
-    <h3>檳城機場</h3>
-    <p>離喬治市約 30 分鐘車程，搭 Grab。UO769 喺 <b>6/10 01:00</b> 起飛，即係星期一夜晚出發：23:00 前到機場，HK Express 起飛前 60 分鐘截止 check-in。</p>
+    <h3>檳城機場 → UO769</h3>
+    <p>機場離喬治市約 30 分鐘車程。UO769 喺 <b>6/10 01:00</b> 起飛，即係星期一夜晚出發。HK Express 櫃位大約起飛前 3 小時開（約 22:00），60 分鐘前截止（00:00）。</p>
+    <div class="links">
+      <a class="ext" href="https://www.hkexpress.com/" target="_blank" rel="noopener">HK Express</a>
+      <a class="ext" href="https://www.airasia.com/" target="_blank" rel="noopener">AirAsia</a>
+      <a class="ext" href="https://www.malaysiaairlines.com/" target="_blank" rel="noopener">Malaysia Airlines</a>
+      <a class="ext" href="https://www.fireflyz.com.my/" target="_blank" rel="noopener">Firefly</a>
+      <a class="ext" href="https://www.flightconnections.com/flights-from-kul-to-pen" target="_blank" rel="noopener">KUL → PEN 航班表</a>
+    </div>
   </div>
 </section>
 
 <section id="plan">
   <h2><span class="num">04</span>每日行程</h2>
 
+  <div class="card">
+    <h3>三個組合，揀一個</h3>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th></th><th>四 1/10</th><th>一 5/10</th><th>適合</th></tr></thead>
+        <tbody>
+          <tr><td class="t"><b>組合 1</b></td><td>A 吉隆坡市內</td><td>甲 早機 → 檳城一日</td><td class="small">想食盡檳城</td></tr>
+          <tr><td class="t"><b>組合 2</b></td><td>B 馬六甲</td><td>甲 早機 → 檳城一日</td><td class="small">三個城市都想去（最攰）</td></tr>
+          <tr><td class="t"><b>組合 3</b></td><td>A 市內／C 雲頂／D 瓜雪</td><td>乙 馬六甲 → 夜機駁紅眼</td><td class="small">唔想早起、慳一晚檳城酒店</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
   <article class="card day" data-date="2026-09-30">
     <div class="date"><span class="d">三 30/9</span><h3>CX725 16:40 到 KLIA T1</h3><span class="todaytag">今日</span></div>
     <ol class="tl">
       <li><span class="when">17:30</span><span>出閘，搭 KLIA Ekspres（28 分鐘）去 KL Sentral</span></li>
       <li><span class="when">18:30</span><span>喺 KL Sentral 買 Touch 'n Go 卡</span></li>
-      <li><span class="when">19:00</span><span>酒店 check-in</span></li>
-      <li><span class="when">晚上</span><span><span class="key">亞羅街 Jalan Alor</span>：黃亞華雞翼、沙爹、炒粿條，再行下 Bukit Bintang，早啲瞓</span></li>
+      <li><span class="when">19:00</span><span>單軌去 Imbi，Dorsett check-in</span></li>
+      <li><span class="when">晚上</span><span><span class="key">亞羅街 Jalan Alor</span>（酒店行過去）：黃亞華雞翼、沙爹、炒粿條，再行下 Bukit Bintang，早啲瞓</span></li>
     </ol>
   </article>
 
   <article class="card day" data-date="2026-10-01">
-    <div class="date"><span class="d">四 1/10</span><h3>吉隆坡市內，或者馬六甲一日遊</h3><span class="todaytag">今日</span></div>
-    <div class="two">
-      <div>
-        <p><span class="badge soft">A</span><b>吉隆坡市內</b></p>
+    <div class="date"><span class="d">四 1/10</span><h3>自由日：四個選擇</h3><span class="todaytag">今日</span></div>
+
+    <details class="opt">
+      <summary><span class="badge soft">A</span><span class="st"><b>吉隆坡市內</b><small>黑風洞、天后宮、茨廠街、雙峰塔</small></span></summary>
+      <div class="body">
         <ol class="tl">
-          <li><span class="when">08:00</span><span>黑風洞 Batu Caves（早去涼啲、少人；272 級彩虹樓梯，要遮膝）</span></li>
+          <li><span class="when">08:00</span><span><span class="key">黑風洞 Batu Caves</span>（早去涼啲、少人；272 級彩虹樓梯，要遮膝）</span></li>
           <li><span class="when">10:30</span><span>天后宮</span></li>
           <li><span class="when">午餐</span><span>茨廠街、鬼仔巷、中央藝術坊</span></li>
-          <li><span class="when">下午</span><span>雙峰塔天橋（要網上預約）</span></li>
+          <li><span class="when">下午</span><span><span class="key">雙峰塔天橋</span>（要網上預約）</span></li>
           <li><span class="when">晚上</span><span>KLCC 公園音樂噴泉 → 天台酒吧</span></li>
         </ol>
+        <div class="links">
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Batu+Caves" target="_blank" rel="noopener">黑風洞</a>
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Thean+Hou+Temple+Kuala+Lumpur" target="_blank" rel="noopener">天后宮</a>
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Kwai+Chai+Hong" target="_blank" rel="noopener">鬼仔巷</a>
+          <a class="ext" href="https://www.petronastwintowers.com.my/" target="_blank" rel="noopener">雙峰塔門票</a>
+        </div>
       </div>
-      <div>
-        <p><span class="badge soft">B</span><b>馬六甲一日遊</b></p>
+    </details>
+
+    <details class="opt">
+      <summary><span class="badge soft">B</span><span class="st"><b>馬六甲一日遊</b><small>世遺古城、雞飯粒、娘惹菜；單程約 2 小時</small></span></summary>
+      <div class="body">
         <ol class="tl">
           <li><span class="when">08:00</span><span>包車或 Grab 出發，約 2 小時（或者喺 TBS 巴士總站搭巴士，約 2–2.5 小時）</span></li>
           <li><span class="when">10:00</span><span><span class="key">荷蘭紅屋</span>、基督教堂 → 聖保羅山 → 葡萄牙城門</span></li>
@@ -299,9 +357,54 @@ footer a{color:var(--muted)}
           <li><span class="when">晚餐</span><span>娘惹菜，或者 Capitol 沙爹朱律</span></li>
           <li><span class="when">20:00</span><span>返 KL，約 22:00 到酒店</span></li>
         </ol>
+        <p class="small muted" style="margin-top:8px">雞場街夜市只係星期五至日開，星期四冇。第二日 FP1 12:30 先開始，夜啲返都唔緊要。揀咗馬六甲，雙峰塔天橋可以搬去星期六 09:00。</p>
+        <div class="links">
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Stadthuys+Melaka" target="_blank" rel="noopener">荷蘭紅屋</a>
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Jonker+Street+Melaka" target="_blank" rel="noopener">雞場街</a>
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Baba+Nyonya+Heritage+Museum+Melaka" target="_blank" rel="noopener">峇峇娘惹博物館</a>
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Melaka+River+Cruise" target="_blank" rel="noopener">馬六甲河遊船</a>
+        </div>
       </div>
-    </div>
-    <div class="callout info">雞場街夜市只係星期五至日開，星期四冇。第二日 FP1 12:30 先開始，所以星期四夜啲返都唔緊要。揀馬六甲嘅話，雙峰塔天橋可以搬去星期六 09:00，睇完先去 KL Sentral 趕 FP3。</div>
+    </details>
+
+    <details class="opt">
+      <summary><span class="badge soft">C</span><span class="st"><b>雲頂高原 Genting Highlands</b><small>纜車、山上 15–25°C 避暑；單程約 1 小時</small></span></summary>
+      <div class="body">
+        <ol class="tl">
+          <li><span class="when">09:00</span><span>Grab 去 Awana SkyWay 纜車站（約 1 小時）</span></li>
+          <li><span class="when">10:00</span><span><span class="key">Awana SkyWay 纜車</span>上山，中途落<span class="key">清水岩廟</span></span></li>
+          <li><span class="when">11:30</span><span>山頂：Genting SkyWorlds 主題樂園，或者行 SkyAvenue 商場</span></li>
+          <li><span class="when">下午</span><span>纜車落山，行纜車站旁邊嘅 Genting Highlands Premium Outlets</span></li>
+          <li><span class="when">18:00</span><span>返 KL 食晚飯</span></li>
+        </ol>
+        <p class="small muted" style="margin-top:8px">山上凍，記得帶件外套。</p>
+        <div class="links">
+          <a class="ext" href="https://www.rwgenting.com/" target="_blank" rel="noopener">Resorts World Genting</a>
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Awana+SkyWay" target="_blank" rel="noopener">Awana SkyWay</a>
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Chin+Swee+Caves+Temple" target="_blank" rel="noopener">清水岩廟</a>
+        </div>
+      </div>
+    </details>
+
+    <details class="opt">
+      <summary><span class="badge soft">D</span><span class="st"><b>瓜雪 Kuala Selangor 螢火蟲</b><small>日頭休息，下晝出發：銀葉猴、海鮮、螢火蟲；單程約 1.5 小時</small></span></summary>
+      <div class="body">
+        <ol class="tl">
+          <li><span class="when">朝早</span><span>瞓晏啲，或者行下商場</span></li>
+          <li><span class="when">14:00</span><span>包車出發，約 1.5 小時</span></li>
+          <li><span class="when">15:30</span><span><span class="key">Bukit Melawati</span> 山上睇銀葉猴、舊炮台</span></li>
+          <li><span class="when">17:30</span><span>Pasir Penambang 海鮮晚餐</span></li>
+          <li><span class="when">19:45</span><span><span class="key">Kampung Kuantan 螢火蟲</span>遊船（冇月光先睇得最清楚）</span></li>
+          <li><span class="when">22:30</span><span>返到 KL</span></li>
+        </ol>
+        <p class="small muted" style="margin-top:8px">天空之鏡 Sky Mirror 要睇潮汐，只係某啲日子有團。有興趣就查下 1/10 有冇。</p>
+        <div class="links">
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Bukit+Melawati+Kuala+Selangor" target="_blank" rel="noopener">Bukit Melawati</a>
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Kampung+Kuantan+Firefly+Park" target="_blank" rel="noopener">Kampung Kuantan 螢火蟲</a>
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Pasir+Penambang+seafood" target="_blank" rel="noopener">Pasir Penambang 海鮮</a>
+        </div>
+      </div>
+    </details>
   </article>
 
   <article class="card day" data-date="2026-10-02">
@@ -311,7 +414,7 @@ footer a{color:var(--muted)}
       <li><span class="when">11:45</span><span>入場：行 fan zone，搵定座位、洗手間同接駁巴士上車位</span></li>
       <li><span class="when">12:30</span><span class="key">FP1</span></li>
       <li><span class="when">16:00</span><span class="key">FP2</span></li>
-      <li><span class="when">晚上</span><span>茨廠街<span class="key">金蓮記福建麵</span>，順路行鬼仔巷</span></li>
+      <li><span class="when">晚上</span><span>茨廠街<span class="key">金蓮記福建麵</span>，順路行鬼仔巷；行到攰就去做個腳底按摩</span></li>
     </ol>
     <div class="callout info">星期五人最少，當係星期六嘅預演：記低由看台行到 KL Sentral 實際要幾耐。</div>
   </article>
@@ -319,45 +422,76 @@ footer a{color:var(--muted)}
   <article class="card day" data-date="2026-10-03">
     <div class="date"><span class="d">六 3/10</span><h3>排位賽 + TRX 晚飯</h3><span class="todaytag">今日</span></div>
     <ol class="tl">
-      <li><span class="when">早上</span><span>瞓晏啲，11:00 由 KL Sentral 出發</span></li>
+      <li><span class="when">早上</span><span>瞓晏啲，11:00 由 KL Sentral 出發（揀咗馬六甲嘅話：09:00 先上雙峰塔天橋）</span></li>
       <li><span class="when">12:00</span><span>入場，12:30 睇 FP3</span></li>
       <li><span class="when">16:00</span><span><span class="key">排位賽</span>，約 17:00 完，<b>一完即走</b></span></li>
-      <li><span class="when">~18:15</span><span>到 KLIA T2 → ~19:00 KL Sentral → 19:30–20:00 到 TRX</span></li>
+      <li><span class="when">~18:15</span><span>到 KLIA T2 → ~19:00 KL Sentral → 單軌去 Imbi，返 Dorsett 沖涼換衫 → 20:00 Grab 去 TRX</span></li>
       <li><span class="when">20:00+</span><span><span class="key">TRX 晚飯</span>；飯後可以上 The Exchange TRX 天台城市公園（開放時間要先查）</span></li>
-      <li><span class="when">瞓前</span><span>執定行李：聽朝 check-out，賽道隨身袋同寄存嗰個行李箱分開執</span></li>
     </ol>
     <div class="callout warn"><b>晚飯最好訂 20:00 或之後。</b>如果訂咗 19:30 或更早，建議改遲啲。</div>
   </article>
 
   <article class="card day" data-date="2026-10-04">
-    <div class="date"><span class="d">日 4/10</span><h3>正賽 → 飛檳城</h3><span class="todaytag">今日</span></div>
+    <div class="date"><span class="d">日 4/10</span><h3>正賽</h3><span class="todaytag">今日</span></div>
     <ol class="tl">
-      <li><span class="when">09:30</span><span>食完早餐 check-out，帶埋行李去 KL Sentral</span></li>
-      <li><span class="when">10:30</span><span>KLIA Ekspres 去 klia2，<span class="key">寄存行李</span></span></li>
-      <li><span class="when">11:15</span><span>喺 Level 1 巴士總站搭接駁巴士，12:00 前入座（星期日人最多，賽前氣氛亦值得早啲到）</span></li>
+      <li><span class="when">早上</span><span>瞓晏啲，食個 brunch</span></li>
+      <li><span class="when">11:00</span><span>出發，12:00 前入座（星期日人最多，接駁巴士排隊最耐，賽前氣氛亦值得早啲到）</span></li>
       <li><span class="when">15:00</span><span class="key">起步 · 56 圈</span></li>
       <li><span class="when">~16:40</span><span>揮格仔旗 → 頒獎</span></li>
-      <li><span class="when">散場</span><span><b>唔好一完就衝去排隊</b>，留 30–60 分鐘避開人潮，再搭接駁巴士返 klia2</span></li>
-      <li><span class="when">~19:00</span><span>攞行李，喺 klia2／Gateway@klia2 食晚飯</span></li>
-      <li><span class="when">21:30–22:30</span><span><span class="key">飛檳城</span>（約 1 小時）→ Grab 去喬治市酒店</span></li>
+      <li><span class="when">散場</span><span><b>唔好一完就衝去排隊</b>，留 30–60 分鐘避開人潮</span></li>
+      <li><span class="when">晚上</span><span><span class="key">Brickfields 小印度蕉葉飯</span>（KL Sentral 行過去），或者返 Bukit Bintang，上 Marini's on 57／Heli Lounge Bar 飲杯嘢慶祝</span></li>
+      <li><span class="when">瞓前</span><span>執定行李。揀咗早機嘅話，聽朝 06:00 就要出門</span></li>
     </ol>
-    <div class="callout info">Sepang 下晝成日落雨，可能會延賽。所以機票唔好早過 21:30，最好買可以改期嘅票價。</div>
   </article>
 
   <article class="card day" data-date="2026-10-05">
-    <div class="date"><span class="d">一 5/10</span><h3>檳城一日</h3><span class="todaytag">今日</span></div>
-    <ol class="tl">
-      <li><span class="when">09:00</span><span>早餐：<span class="key">卓顺茶室</span> kaya 多士、半熟蛋</span></li>
-      <li><span class="when">10:00</span><span>喬治市步行：<span class="key">張弼士藍屋</span>（導賞團要預約）→ 亞美尼亞街壁畫 → <span class="key">邱公司</span> → 姓氏橋（周橋）</span></li>
-      <li><span class="when">12:30</span><span>午餐：炒粿條、亞參叻沙，飯後食<span class="key">檳城路潮州煎蕊</span></span></li>
-      <li><span class="when">14:00</span><span>返酒店避熱、瞓個 siesta、沖涼</span></li>
-      <li><span class="when">15:30</span><span><span class="key">極樂寺</span>（亞依淡，就喺升旗山附近）</span></li>
-      <li><span class="when">17:00</span><span><span class="key">升旗山</span>纜車上山，山頂睇日落（約 19:10）</span></li>
-      <li><span class="when">20:00</span><span>晚餐：<span class="key">Gurney Drive 夜市</span></span></li>
-      <li><span class="when">21:30</span><span>返酒店攞行李、沖涼換衫</span></li>
-      <li><span class="when">22:30</span><span>Grab 去檳城機場（約 30 分鐘），23:00 前到</span></li>
-    </ol>
-    <p class="small muted">檳城熟食檔各有休息日，專登去某一檔之前先查清楚。入極樂寺要遮膝遮膊。</p>
+    <div class="date"><span class="d">一 5/10</span><h3>飛檳城：兩個方案</h3><span class="todaytag">今日</span></div>
+
+    <details class="opt" open>
+      <summary><span class="badge red">甲</span><span class="st"><b>早機 → 檳城玩一日</b><small>08:00–09:00 起飛，成日喺喬治市</small></span></summary>
+      <div class="body">
+        <ol class="tl">
+          <li><span class="when">06:00</span><span>Check-out，Grab 去 KL Sentral 轉 KLIA Ekspres，或者直接 Grab 去機場（約 1 小時）</span></li>
+          <li><span class="when">08:30</span><span>起飛 → 09:30 到檳城 → Grab 去喬治市（約 30 分鐘），喺酒店放低行李</span></li>
+          <li><span class="when">10:30</span><span>喬治市步行：<span class="key">張弼士藍屋</span>（導賞團要預約）→ 亞美尼亞街壁畫 → <span class="key">邱公司</span> → 姓氏橋（周橋）</span></li>
+          <li><span class="when">13:00</span><span>午餐：炒粿條，飯後食<span class="key">檳城路潮州煎蕊</span></span></li>
+          <li><span class="when">14:30</span><span>返酒店避熱、瞓個 siesta、沖涼</span></li>
+          <li><span class="when">16:00</span><span><span class="key">極樂寺</span>，順路食<span class="key">亞依淡叻沙</span>（就喺山腳）</span></li>
+          <li><span class="when">17:30</span><span><span class="key">升旗山</span>纜車上山，山頂睇日落（約 19:10）</span></li>
+          <li><span class="when">20:00</span><span>晚餐：<span class="key">Gurney Drive 夜市</span></span></li>
+          <li><span class="when">21:30</span><span>返酒店攞行李、沖涼換衫</span></li>
+          <li><span class="when">22:30</span><span>Grab 去檳城機場（約 30 分鐘），23:00 前到</span></li>
+        </ol>
+        <p class="small muted" style="margin-top:8px">檳城熟食檔各有休息日，專登去某一檔之前先查清楚。入極樂寺要遮膝遮膊。</p>
+        <div class="links">
+          <a class="ext" href="https://www.cheongfatttzemansion.com/" target="_blank" rel="noopener">藍屋導賞</a>
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Khoo+Kongsi+Penang" target="_blank" rel="noopener">邱公司</a>
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Chew+Jetty+Penang" target="_blank" rel="noopener">周橋</a>
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Kek+Lok+Si+Temple" target="_blank" rel="noopener">極樂寺</a>
+          <a class="ext" href="https://www.penanghill.gov.my/" target="_blank" rel="noopener">升旗山</a>
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Gurney+Drive+Hawker+Centre" target="_blank" rel="noopener">Gurney Drive</a>
+        </div>
+      </div>
+    </details>
+
+    <details class="opt">
+      <summary><span class="badge soft">乙</span><span class="st"><b>留喺 KL 近郊 → 夜機直接駁 UO769</b><small>19:00–20:30 起飛，唔使早起，唔使 book 檳城酒店</small></span></summary>
+      <div class="body">
+        <ol class="tl">
+          <li><span class="when">日頭</span><span>揀一樣：<span class="key">馬六甲一日遊</span>（星期四冇去嘅話）、<span class="key">太子城 + 黑風洞</span>、或者 KL 市內（睇「更多選擇」）</span></li>
+          <li><span class="when">行李</span><span>KL 酒店 late check-out；包車去馬六甲就將行李放車尾</span></li>
+          <li><span class="when">17:30</span><span>到 KLIA／klia2。馬六甲過去約 1.5–2 小時，唔使返市區</span></li>
+          <li><span class="when">19:30</span><span>起飛 → 20:30 到檳城</span></li>
+          <li><span class="when">21:00</span><span>攞行李，行去國際出發大堂，食個夜宵</span></li>
+          <li><span class="when">22:00</span><span>UO769 check-in 開櫃</span></li>
+        </ol>
+        <p class="small muted" style="margin-top:8px">兩張分開買嘅機票：最遲 22:30 前落地，越早越好。</p>
+        <div class="links">
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Putra+Mosque+Putrajaya" target="_blank" rel="noopener">太子城粉紅清真寺</a>
+          <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Penang+International+Airport" target="_blank" rel="noopener">檳城機場</a>
+        </div>
+      </div>
+    </details>
   </article>
 
   <article class="card day" data-date="2026-10-06">
@@ -370,34 +504,85 @@ footer a{color:var(--muted)}
   </article>
 </section>
 
+<section id="more">
+  <h2><span class="num">05</span>更多選擇</h2>
+  <p class="small muted">一兩個鐘就搞掂嘅嘢，可以塞喺賽車日朝早、星期一夜機之前，或者代替行程入面任何一項。</p>
+
+  <h3 class="sub-h">吉隆坡市內</h3>
+  <div class="card grid-list">
+    <div class="item"><div class="name"><a class="ext" href="https://www.petronastwintowers.com.my/" target="_blank" rel="noopener">雙峰塔天橋 + KLCC 公園</a></div><div class="meta">要預約；星期一休息</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.menarakl.com.my/" target="_blank" rel="noopener">吉隆坡塔 Sky Box</a></div><div class="meta">玻璃箱望雙峰塔；塔腳有 KL Forest Eco Park 樹頂步道</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Merdeka+Square+Kuala+Lumpur" target="_blank" rel="noopener">獨立廣場</a></div><div class="meta">蘇丹阿都沙末大廈，殖民地建築</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Islamic+Arts+Museum+Malaysia" target="_blank" rel="noopener">伊斯蘭藝術博物館</a></div><div class="meta">建築靚、冷氣足，下晝避熱一流</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=KL+Bird+Park" target="_blank" rel="noopener">吉隆坡飛禽公園</a></div><div class="meta">湖濱公園入面，半日</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Aquaria+KLCC" target="_blank" rel="noopener">Aquaria KLCC</a></div><div class="meta">落雨天後備</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=REXKL" target="_blank" rel="noopener">REXKL</a></div><div class="meta">茨廠街舊戲院改建嘅書店同展覽空間</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Changkat+Bukit+Bintang" target="_blank" rel="noopener">Changkat Bukit Bintang</a></div><div class="meta">酒吧街，賽後飲嘢</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=foot+reflexology+Bukit+Bintang" target="_blank" rel="noopener">腳底按摩</a></div><div class="meta">Bukit Bintang 周圍好多，賽車日行完一流</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Pavilion+Kuala+Lumpur" target="_blank" rel="noopener">購物：Pavilion · TRX · Suria KLCC</a></div><div class="meta">落大雨就入商場</div></div>
+  </div>
+
+  <h3 class="sub-h">近郊</h3>
+  <div class="card grid-list">
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Putra+Mosque+Putrajaya" target="_blank" rel="noopener">太子城 Putrajaya</a></div><div class="meta">粉紅清真寺、首相署、湖景；近 KLIA，適合夜機方案去機場之前。出發前查開放時間，避開祈禱時間</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Klang+bak+kut+teh" target="_blank" rel="noopener">巴生肉骨茶</a></div><div class="meta">肉骨茶發源地，由 KL 揸車約 45 分鐘</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Mitsui+Outlet+Park+KLIA" target="_blank" rel="noopener">Mitsui Outlet Park</a></div><div class="meta">KLIA 附近，亦係賽道接駁巴士站之一</div></div>
+    <div class="item"><div class="name">雲頂、瓜雪、馬六甲</div><div class="meta">見星期四 B、C、D 選擇</div></div>
+  </div>
+
+  <h3 class="sub-h">檳城（早機方案）</h3>
+  <div class="card grid-list">
+    <div class="item"><div class="name"><a class="ext" href="https://thehabitat.my/" target="_blank" rel="noopener">The Habitat 升旗山</a></div><div class="meta">熱帶雨林樹頂步道，同升旗山一齊去</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://entopia.com/" target="_blank" rel="noopener">Entopia 蝴蝶園</a></div><div class="meta">室內外都有，落雨都玩得</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Pinang+Peranakan+Mansion" target="_blank" rel="noopener">檳城娘惹博物館</a></div><div class="meta">綠色大宅，娘惹文化</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Hin+Bus+Depot+Penang" target="_blank" rel="noopener">Hin Bus Depot</a></div><div class="meta">舊巴士廠改建嘅藝術空間</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Batu+Ferringhi+night+market" target="_blank" rel="noopener">峇都丁宜 Batu Ferringhi</a></div><div class="meta">海灘同夜市，離喬治市約 30 分鐘</div></div>
+  </div>
+</section>
+
 <section id="food">
-  <h2><span class="num">05</span>食乜好</h2>
-  <div class="card food">
-    <div><span>黃亞華雞翼、沙爹、炒粿條</span><span>亞羅街 Jalan Alor</span></div>
-    <div><span>金蓮記福建麵</span><span>茨廠街</span></div>
-    <div><span>蕉葉飯</span><span>Brickfields（KL Sentral 旁）</span></div>
-    <div><span>天台酒吧</span><span>Marini's on 57 · Heli Lounge Bar</span></div>
+  <h2><span class="num">06</span>美食</h2>
+  <div class="callout info">賽車日食飽早餐先入場，場內嘢食貴又要排隊。熟食檔營業時間同休息日成日變，去之前喺 Google Maps 睇清楚。</div>
+
+  <h3 class="sub-h">吉隆坡</h3>
+  <div class="card grid-list">
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Ho+Kow+Hainam+Kopitiam" target="_blank" rel="noopener">好口海南咖啡店</a><span class="tag">早餐</span></div><div class="meta">海南咖啡、kaya 多士、椰漿飯 · 茨廠街鬼仔巷旁</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Imbi+Market+ICC+Pudu" target="_blank" rel="noopener">Imbi Market（ICC Pudu）</a><span class="tag">早餐</span></div><div class="meta">一次過試勻 KL 早餐檔 · Pudu</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Village+Park+Restaurant+Damansara+Uptown" target="_blank" rel="noopener">Village Park Restaurant</a><span class="tag">椰漿飯</span></div><div class="meta">最出名嘅 nasi lemak 之一 · Damansara Uptown（要搭車）</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Madam+Kwan%27s+Pavilion" target="_blank" rel="noopener">Madam Kwan's</a><span class="tag">馬來菜</span></div><div class="meta">椰漿飯、咖喱，冷氣餐廳 · Pavilion／Suria KLCC</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Kim+Lian+Kee+Petaling+Street" target="_blank" rel="noopener">金蓮記</a><span class="tag">福建麵</span></div><div class="meta">1927 年老字號，黑醬油大碌麵 · 茨廠街</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Wong+Ah+Wah+Jalan+Alor" target="_blank" rel="noopener">黃亞華</a><span class="tag">雞翼</span></div><div class="meta">燒雞翼、沙爹 · 亞羅街</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Sun+Fong+Bak+Kut+Teh+Kuala+Lumpur" target="_blank" rel="noopener">新峰肉骨茶</a><span class="tag">夜宵</span></div><div class="meta">開到好夜，賽後宵夜 · Bukit Bintang</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Lot+10+Hutong" target="_blank" rel="noopener">Lot 10 Hutong</a><span class="tag">熟食中心</span></div><div class="meta">老字號熟食檔集中，冷氣 · Bukit Bintang</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Vishal+Food+and+Catering+Brickfields" target="_blank" rel="noopener">Vishal Food &amp; Catering</a><span class="tag">蕉葉飯</span></div><div class="meta">KL Sentral 行過去，賽後就近 · Brickfields</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Marini%27s+on+57" target="_blank" rel="noopener">Marini's on 57</a> · <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Heli+Lounge+Bar+Kuala+Lumpur" target="_blank" rel="noopener">Heli Lounge Bar</a><span class="tag">天台酒吧</span></div><div class="meta">慶祝賽後，望雙峰塔夜景</div></div>
   </div>
-  <h3 style="margin-top:14px">馬六甲</h3>
-  <div class="card food">
-    <div><span>雞飯粒</span><span>中華茶室</span></div>
-    <div><span>娘惹菜</span><span>雞場街一帶</span></div>
-    <div><span>沙爹朱律</span><span>Capitol</span></div>
-    <div><span>煎蕊</span><span>雞場街</span></div>
+
+  <h3 class="sub-h">馬六甲</h3>
+  <div class="card grid-list">
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Chung+Wah+Chicken+Rice+Ball+Melaka" target="_blank" rel="noopener">中華茶室</a> · <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Hoe+Kee+Chicken+Rice+Ball+Melaka" target="_blank" rel="noopener">和記</a><span class="tag">雞飯粒</span></div><div class="meta">早啲去，排隊好長 · 雞場街</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Nancy%27s+Kitchen+Melaka" target="_blank" rel="noopener">Nancy's Kitchen</a><span class="tag">娘惹菜</span></div><div class="meta">娘惹雞、acar，要訂位</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Capitol+Satay+Celup+Melaka" target="_blank" rel="noopener">Capitol Satay Celup</a><span class="tag">沙爹朱律</span></div><div class="meta">串串浸花生醬汁，晚餐</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Jonker+88+Melaka" target="_blank" rel="noopener">Jonker 88</a><span class="tag">煎蕊</span></div><div class="meta">榴槤煎蕊、娘惹叻沙 · 雞場街</div></div>
   </div>
-  <h3 style="margin-top:14px">檳城</h3>
-  <div class="card food">
-    <div><span>Kaya 多士、半熟蛋</span><span>卓顺茶室</span></div>
-    <div><span>炒粿條、亞參叻沙</span><span>喬治市熟食檔</span></div>
-    <div><span>煎蕊</span><span>檳城路潮州煎蕊</span></div>
-    <div><span>Nasi kandar</span><span>Line Clear</span></div>
-    <div><span>夜市大排檔</span><span>Gurney Drive</span></div>
+
+  <h3 class="sub-h">檳城</h3>
+  <div class="card grid-list">
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Toh+Soon+Cafe+Penang" target="_blank" rel="noopener">卓顺茶室</a><span class="tag">早餐</span></div><div class="meta">炭烤 kaya 多士、半熟蛋 · 後巷小店</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Siam+Road+Char+Koay+Teow" target="_blank" rel="noopener">Siam Road Char Koay Teow</a><span class="tag">炒粿條</span></div><div class="meta">炭火炒粿條名檔，排長龍</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Penang+Road+Famous+Teochew+Chendul" target="_blank" rel="noopener">檳城路潮州煎蕊</a><span class="tag">甜品</span></div><div class="meta">企喺街邊食，好快</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Air+Itam+Laksa" target="_blank" rel="noopener">亞依淡叻沙</a><span class="tag">亞參叻沙</span></div><div class="meta">極樂寺山腳，順路</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Line+Clear+Nasi+Kandar" target="_blank" rel="noopener">Line Clear</a><span class="tag">Nasi kandar</span></div><div class="meta">咖喱淋飯，開到夜晚</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Kafe+Kheng+Pin+Penang" target="_blank" rel="noopener">Kafe Kheng Pin</a><span class="tag">午餐</span></div><div class="meta">滷肉、海南雞飯，只做日頭</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Tek+Sen+Restaurant+Penang" target="_blank" rel="noopener">德成飯店</a><span class="tag">中菜</span></div><div class="meta">家常小炒，雙味肉出名</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=China+House+Penang" target="_blank" rel="noopener">China House</a><span class="tag">咖啡蛋糕</span></div><div class="meta">海墘街老屋 cafe，下晝歇腳</div></div>
+    <div class="item"><div class="name"><a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=Gurney+Drive+Hawker+Centre" target="_blank" rel="noopener">Gurney Drive</a> · <a class="ext" href="https://www.google.com/maps/search/?api=1&amp;query=New+Lane+Hawker+Penang" target="_blank" rel="noopener">新巷 New Lane</a><span class="tag">夜市</span></div><div class="meta">晚餐一次過食勻：蠔煎、炒粿條、囉惹</div></div>
   </div>
 </section>
 
 <section id="pack">
-  <h2><span class="num">06</span>行李清單</h2>
-  <p class="small muted">10 月初 KL 約 24–33°C，好潮濕，下晝成日有雷雨。剔咗嘅嘢會記住喺呢部機。</p>
+  <h2><span class="num">07</span>行李清單</h2>
+  <p class="small muted">參考 <a class="ext" href="https://utravel.com.hk/news/detail/15855/長短途必備執行李清單/1" target="_blank" rel="noopener">utravel 行李清單</a>，按 10 月天氣同 F1 調整。10 月初 KL 約 24–33°C，好潮濕，下晝成日有雷雨。剔咗嘅嘢會記住喺呢部機。</p>
   <div class="progress">
     <div class="row"><span id="ptext">0 / 0</span><button type="button" id="resetAll">全部清除</button></div>
     <div class="bar"><i id="pbar"></i></div>
@@ -406,23 +591,24 @@ footer a{color:var(--muted)}
   <div class="card grp" data-grp="pre">
     <div class="grp-head"><h3>出發前準備</h3><span class="count"></span></div>
     <ul class="check">
-      <li><label><input type="checkbox" data-id="pre-mdac"><span class="txt">網上填 MDAC 馬來西亞數碼入境卡<small>抵達前 3 日內填，免費</small></span></label></li>
+      <li><label><input type="checkbox" data-id="pre-mdac"><span class="txt">網上填 MDAC 馬來西亞數碼入境卡<small>抵達前 3 日內填，免費 · <a class="ext" href="https://imigresen-online.imi.gov.my/mdac/main" target="_blank" rel="noopener">官方網站</a></small></span></label></li>
       <li><label><input type="checkbox" data-id="pre-passport"><span class="txt">護照有效期 6 個月以上</span></label></li>
       <li><label><input type="checkbox" data-id="pre-atm"><span class="txt">提款卡開通海外提款</span></label></li>
-      <li><label><input type="checkbox" data-id="pre-ins"><span class="txt">買旅遊保險<small>要包航班延誤</small></span></label></li>
+      <li><label><input type="checkbox" data-id="pre-ins"><span class="txt">買旅遊保險<small>要包航班延誤；揀夜機方案要包 missed connection</small></span></label></li>
       <li><label><input type="checkbox" data-id="pre-checkin"><span class="txt">網上預辦登機<small>CX app</small></span></label></li>
       <li><label><input type="checkbox" data-id="pre-cash"><span class="txt">兌換 RM300–500 現金<small>大部分地方可以拍卡或用 Grab</small></span></label></li>
       <li><label><input type="checkbox" data-id="pre-esim"><span class="txt">買 eSIM 或開漫遊</span></label></li>
       <li><label><input type="checkbox" data-id="pre-apps"><span class="txt">下載 F1 電子門票、F1 app、Grab app</span></label></li>
-      <li><label><input type="checkbox" data-id="pre-pass"><span class="txt">買 KLIA Ekspres Race Pass</span></label></li>
-      <li><label><input type="checkbox" data-id="pre-klcc"><span class="txt">預約雙峰塔天橋</span></label></li>
+      <li><label><input type="checkbox" data-id="pre-pass"><span class="txt">買 KLIA Ekspres Race Pass<small><a class="ext" href="https://www.kliaekspres.com/" target="_blank" rel="noopener">KLIA Ekspres</a></small></span></label></li>
+      <li><label><input type="checkbox" data-id="pre-klcc"><span class="txt">預約雙峰塔天橋<small><a class="ext" href="https://www.petronastwintowers.com.my/" target="_blank" rel="noopener">官方網站</a></small></span></label></li>
       <li><label><input type="checkbox" data-id="pre-dinner"><span class="txt">確認 TRX 晚飯訂 20:00 或之後</span></label></li>
       <li><label><input type="checkbox" data-id="pre-bag"><span class="txt">睇賽道袋同物品規定<small>例如雨遮尺寸</small></span></label></li>
-      <li><label><input type="checkbox" data-id="pre-domestic"><span class="txt">訂 4/10 KL → 檳城機票<small>klia2 出發，21:30–22:30，最好可以改期</small></span></label></li>
-      <li><label><input type="checkbox" data-id="pre-penang-hotel"><span class="txt">訂檳城酒店<small>要求 late check-out，或者 book 埋 5/10 晚</small></span></label></li>
+      <li><label><input type="checkbox" data-id="pre-domestic"><span class="txt">訂 5/10 KL → 檳城機票<small>早機 08:00–09:00；或者夜機 19:00–20:30（最遲 22:30 落地）</small></span></label></li>
+      <li><label><input type="checkbox" data-id="pre-penang-hotel"><span class="txt">（早機方案）訂檳城酒店 5/10<small>當 day room 用，要求 early check-in</small></span></label></li>
+      <li><label><input type="checkbox" data-id="pre-kl-late"><span class="txt">（夜機方案）同 KL 酒店要求 late check-out</span></label></li>
       <li><label><input type="checkbox" data-id="pre-uo769"><span class="txt">核對 UO769 係 6/10 01:00<small>即係星期一夜晚出發</small></span></label></li>
       <li><label><input type="checkbox" data-id="pre-baggage"><span class="txt">預先買國內機同 HK Express 寄艙行李額<small>廉航手提行李限 7kg，查得好嚴；買 F1 紀念品記得留位</small></span></label></li>
-      <li><label><input type="checkbox" data-id="pre-bluemansion"><span class="txt">預約張弼士藍屋導賞</span></label></li>
+      <li><label><input type="checkbox" data-id="pre-bluemansion"><span class="txt">（早機方案）預約張弼士藍屋導賞<small><a class="ext" href="https://www.cheongfatttzemansion.com/" target="_blank" rel="noopener">官方網站</a></small></span></label></li>
     </ul>
   </div>
 
@@ -436,17 +622,17 @@ footer a{color:var(--muted)}
       <li><label><input type="checkbox" data-id="c-tissue"><span class="txt">紙巾、濕紙巾、口罩</span></label></li>
       <li><label><input type="checkbox" data-id="c-bottle"><span class="txt">空水樽</span></label></li>
       <li><label><input type="checkbox" data-id="c-sleep"><span class="txt">頸枕、眼罩、耳塞<small>紅眼機必備</small></span></label></li>
-      <li><label><input type="checkbox" data-id="c-jacket"><span class="txt">薄外套<small>機艙同商場冷氣好凍</small></span></label></li>
+      <li><label><input type="checkbox" data-id="c-jacket"><span class="txt">薄外套<small>機艙同商場冷氣好凍；去雲頂都要</small></span></label></li>
       <li><label><input type="checkbox" data-id="c-redeye"><span class="txt">紅眼機小包<small>牙刷、替換衫；一落機就要返工都唔怕</small></span></label></li>
     </ul>
   </div>
 
   <div class="card grp" data-grp="clothes">
-    <div class="grp-head"><h3>寄艙：衫褲（6 日）</h3><span class="count"></span></div>
+    <div class="grp-head"><h3>寄艙：衫褲（7 日）</h3><span class="count"></span></div>
     <ul class="check">
       <li><label><input type="checkbox" data-id="w-tee"><span class="txt">速乾 T 恤 × 6</span></label></li>
       <li><label><input type="checkbox" data-id="w-shorts"><span class="txt">短褲 × 3</span></label></li>
-      <li><label><input type="checkbox" data-id="w-pants"><span class="txt">長褲 × 1–2<small>清真寺、黑風洞要遮膝，亦擋得住商場冷氣</small></span></label></li>
+      <li><label><input type="checkbox" data-id="w-pants"><span class="txt">長褲 × 1–2<small>黑風洞、極樂寺、清真寺要遮膝，亦擋得住冷氣</small></span></label></li>
       <li><label><input type="checkbox" data-id="w-smart"><span class="txt">Smart casual 一套<small>星期六 TRX 晚飯</small></span></label></li>
       <li><label><input type="checkbox" data-id="w-under"><span class="txt">內衣褲、襪 × 7</span></label></li>
       <li><label><input type="checkbox" data-id="w-pj"><span class="txt">睡衣</span></label></li>
@@ -466,7 +652,7 @@ footer a{color:var(--muted)}
       <li><label><input type="checkbox" data-id="t-shave"><span class="txt">剃鬚用品、潤唇膏</span></label></li>
       <li><label><input type="checkbox" data-id="t-sun"><span class="txt">防曬 SPF50+<small>超過 100ml 要寄艙</small></span></label></li>
       <li><label><input type="checkbox" data-id="t-lens"><span class="txt">隱形眼鏡同藥水<small>賽道風沙大，可以考慮戴眼鏡</small></span></label></li>
-      <li><label><input type="checkbox" data-id="t-mosq"><span class="txt">蚊怕水<small>馬來西亞有骨痛熱症</small></span></label></li>
+      <li><label><input type="checkbox" data-id="t-mosq"><span class="txt">蚊怕水<small>馬來西亞有骨痛熱症；去瓜雪睇螢火蟲必備</small></span></label></li>
     </ul>
   </div>
 
@@ -510,7 +696,7 @@ footer a{color:var(--muted)}
 </main>
 
 <footer class="wrap">
-  <p>資料截至 2026-09-30。出發前請再核對官方賽程、航班同交通安排。</p>
+  <p>資料截至 2026-09-30。出發前請再核對官方賽程、航班、景點開放時間同餐廳休息日。</p>
   <p>來源：</p>
   <ul>
     <li><a href="https://utravel.com.hk/news/detail/15855/長短途必備執行李清單/1">utravel 行李清單</a></li>
@@ -522,7 +708,6 @@ footer a{color:var(--muted)}
     <li><a href="https://www.flightstats.com/v2/flight-tracker/UO/769">FlightStats UO769 PEN–HKG</a></li>
     <li><a href="https://www.hkexpress.com/About-Us/Media-Centre/UOxPEN-MOU">HK Express 檳城航線</a></li>
     <li><a href="https://www.flightconnections.com/flights-from-kul-to-pen">KUL–PEN 航班</a></li>
-    <li><a href="https://www.klia2.info/klia2/facilities/luggage-storage-and-locker/">klia2 行李寄存</a></li>
   </ul>
 </footer>
 
